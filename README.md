@@ -5,7 +5,7 @@ time calculator
 ## Installation
 
 ```sh
-go install github.com/winebarrel/tmc@latest
+go install github.com/winebarrel/tmc/cmd/tmc@latest
 ```
 
 ## Usage
