@@ -98,7 +98,20 @@ func Eval(str string) (time.Duration, error) {
 }
 
 func DurToStr(dur time.Duration) string {
+	minus := false
+
+	if dur < 0 {
+		minus = true
+		dur *= -1
+	}
+
 	mod := dur % time.Hour
 	dur -= mod
-	return fmt.Sprintf("%d:%02d", dur/time.Hour, mod/time.Minute)
+	tmStr := fmt.Sprintf("%d:%02d", dur/time.Hour, mod/time.Minute)
+
+	if minus {
+		tmStr = "-" + tmStr
+	}
+
+	return tmStr
 }
