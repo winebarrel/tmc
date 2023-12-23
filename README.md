@@ -1,3 +1,6 @@
+> [!note]
+> see https://github.com/winebarrel/tm
+
 # tmc
 
 time calculator
